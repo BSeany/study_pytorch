@@ -36,3 +36,17 @@ for epoch in range(100):  # 训练 100 轮
     # 每 10 轮输出一次损失
     if (epoch+1) % 10 == 0:
         print(f'Epoch [{epoch+1}/100], Loss: {loss.item():.4f}')
+print("\n")
+print(f"X = {X}")
+print(Y)
+
+# 训练结束后，查看模型的权重（参数）
+print("=== 模型的权重/偏置（可训练参数） ===")
+for name, param in model.named_parameters():
+    print(f"参数名: {name}, 形状: {param.shape}, 值:\n{param.data}\n")
+
+# 查看最终的Loss值
+print("=== 最终的Loss值 ===")
+final_output = model(X)
+final_loss = criterion(final_output, Y)
+print(f"最终Loss值: {final_loss.item()}")
