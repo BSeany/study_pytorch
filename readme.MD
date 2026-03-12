@@ -70,3 +70,4 @@ CNN 是什么？一句话 + 通俗讲透
 ![本地图片](./images/mean-std.png "mean 和 std")
 
 # 线性回归 linear regression
+
